@@ -50,7 +50,7 @@ Teams building AI agents face a critical gap in their development workflow:
 ### Installation
 
 ```bash
-pip install agentunit
+pip install agentassert
 ```
 
 ### Write Your First Test
@@ -287,7 +287,7 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install agentunit
+          pip install agentassert
           pip install -r requirements.txt
       
       - name: Run agent tests
@@ -300,7 +300,7 @@ jobs:
 agent-tests:
   image: python:3.11
   script:
-    - pip install agentunit
+    - pip install agentassert
     - agentunit run tests/
 ```
 
@@ -344,5 +344,5 @@ AgentUnit is released under the **MIT License**. See [LICENSE](LICENSE) for deta
 </p>
 
 <p align="center">
-  <code>pip install agentunit</code>
+  <code>pip install agentassert</code>
 </p>

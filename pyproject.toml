@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "agentunit"
+name = "agentassert"
 version = "0.1.0"
 description = "Behavioral testing framework for AI agents — pytest for AI agents"
 readme = "README.md"
