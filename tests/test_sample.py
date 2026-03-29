@@ -6,7 +6,7 @@ These tests show the full end-to-end workflow:
 3. Assert on the agent's behavior using the captured trace
 """
 
-from agentunit import agent_test, expect, mock_tool, contains
+from agentassert import agent_test, expect, mock_tool, contains
 
 
 # ═══════════════════════════════════════════════════════════════════════════════

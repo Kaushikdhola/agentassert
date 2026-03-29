@@ -1,6 +1,6 @@
-# Contributing to AgentUnit
+# Contributing to AgentAssert
 
-Thank you for your interest in contributing to AgentUnit.
+Thank you for your interest in contributing to AgentAssert.
 
 This document outlines the guidelines for contributing to the project. Please read through before submitting your first contribution.
 
@@ -39,7 +39,7 @@ When reporting bugs, include:
 2. **Steps to reproduce** the behavior
 3. **Expected behavior** — what you expected to happen
 4. **Actual behavior** — what actually happened
-5. **Environment details** — Python version, OS, AgentUnit version
+5. **Environment details** — Python version, OS, AgentAssert version
 6. **Code samples** — minimal reproducible example if possible
 
 ### Suggesting Features
@@ -85,8 +85,8 @@ Documentation improvements are always welcome:
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/agentunit.git
-cd agentunit
+git clone https://github.com/YOUR_USERNAME/agentassert.git
+cd agentassert
 
 # Create virtual environment
 python -m venv venv
@@ -96,20 +96,20 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -e ".[dev]"
 
 # Run tests to verify setup
-agentunit run tests/
+agentassert run tests/
 ```
 
 ### Running Tests
 
 ```bash
 # Run all tests
-agentunit run tests/
+agentassert run tests/
 
 # Run with verbose output
-agentunit run tests/ -v
+agentassert run tests/ -v
 
 # Run specific test file
-agentunit run tests/test_sample.py
+agentassert run tests/test_sample.py
 ```
 
 ### Code Quality
@@ -122,7 +122,7 @@ ruff format .
 ruff check .
 
 # Type checking
-mypy agentunit/
+mypy agentassert/
 ```
 
 ---
@@ -197,7 +197,7 @@ All contributors will be recognized in:
 
 ### License Agreement
 
-By contributing to AgentUnit, you agree that your contributions will be licensed under the MIT License. You also confirm that you have the right to submit the contribution.
+By contributing to AgentAssert, you agree that your contributions will be licensed under the MIT License. You also confirm that you have the right to submit the contribution.
 
 ---
 
@@ -207,4 +207,4 @@ If you have questions about contributing, feel free to open a Discussion on GitH
 
 ---
 
-*Thank you for helping improve AgentUnit.*
+*Thank you for helping improve AgentAssert.*

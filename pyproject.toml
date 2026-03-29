@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "agentassert"
-version = "0.1.0"
+version = "0.1.1"
 description = "Behavioral testing framework for AI agents — pytest for AI agents"
 readme = "README.md"
 license = "MIT"
@@ -48,7 +48,7 @@ crewai = ["crewai>=0.80"]
 autogen = ["pyautogen>=0.4"]
 llamaindex = ["llama-index>=0.12"]
 all-adapters = [
-    "agentunit[langchain,crewai,autogen,llamaindex]"
+    "agentassert[langchain,crewai,autogen,llamaindex]"
 ]
 dev = [
     "pytest>=8.0.0",
@@ -59,16 +59,16 @@ dev = [
 ]
 
 [project.scripts]
-agentunit = "agentunit.cli.main:main"
+agentassert = "agentassert.cli.main:main"
 
 [project.urls]
-Homepage = "https://github.com/kaushikdhola/agentunit"
-Documentation = "https://github.com/kaushikdhola/agentunit#readme"
-Repository = "https://github.com/kaushikdhola/agentunit.git"
-Issues = "https://github.com/kaushikdhola/agentunit/issues"
+Homepage = "https://github.com/kaushikdhola/agentassert"
+Documentation = "https://github.com/kaushikdhola/agentassert#readme"
+Repository = "https://github.com/kaushikdhola/agentassert.git"
+Issues = "https://github.com/kaushikdhola/agentassert/issues"
 
 [tool.hatch.build.targets.wheel]
-packages = ["agentunit"]
+packages = ["agentassert"]
 
 [tool.ruff]
 line-length = 100

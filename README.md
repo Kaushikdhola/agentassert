@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/AgentUnit-v0.1.0-blue?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/AgentAssert-v0.1.1-blue?style=for-the-badge" alt="Version">
   <img src="https://img.shields.io/badge/python-3.10+-green?style=for-the-badge&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/license-MIT-orange?style=for-the-badge" alt="License">
 </p>
 
-<h1 align="center">AgentUnit</h1>
+<h1 align="center">AgentAssert</h1>
 
 <p align="center">
   <strong>The Behavioral Testing Framework for AI Agents</strong>
@@ -33,9 +33,9 @@ Teams building AI agents face a critical gap in their development workflow:
 | Evaluation dashboards | CI/CD pass/fail gates |
 | LLM output quality metrics | Agent execution path testing |
 
-**AgentUnit fills this gap.** It's an open-source, framework-agnostic, local-first behavioral test framework designed specifically for AI agent pipelines.
+**AgentAssert fills this gap.** It's an open-source, framework-agnostic, local-first behavioral test framework designed specifically for AI agent pipelines.
 
-## Why AgentUnit?
+## Why AgentAssert?
 
 - **Framework Agnostic** — Works with LangChain, CrewAI, AutoGen, LlamaIndex, or raw API calls
 - **Local First** — No cloud accounts, no dashboards, no external services required
@@ -57,7 +57,7 @@ pip install agentassert
 
 ```python
 # tests/test_my_agent.py
-from agentunit import agent_test, expect, mock_tool, contains
+from agentassert import agent_test, expect, mock_tool, contains
 
 @agent_test
 def test_research_agent_workflow(agent_harness):
@@ -85,9 +85,9 @@ def test_research_agent_workflow(agent_harness):
 ### Run Your Tests
 
 ```bash
-$ agentunit run tests/
+$ agentassert run tests/
 
-AgentUnit v0.1.0 — Behavioral Testing Framework for AI Agents
+AgentAssert v0.1.0 — Behavioral Testing Framework for AI Agents
 collecting ... 3 tests
 
 tests/test_my_agent.py
@@ -164,7 +164,7 @@ expect(trace).output.is_valid_json()
 Flexible matchers for complex assertion scenarios:
 
 ```python
-from agentunit import (
+from agentassert import (
     # String matchers
     contains, matches, starts_with, ends_with, any_string,
     
@@ -194,35 +194,35 @@ expect(trace).tool("search").called_with(
 
 ```bash
 # Run all tests in current directory
-agentunit run
+agentassert run
 
 # Run tests in a specific directory
-agentunit run tests/
+agentassert run tests/
 
 # Run a specific test file
-agentunit run tests/test_research_agent.py
+agentassert run tests/test_research_agent.py
 
 # Filter tests by keyword
-agentunit run -k "search"
+agentassert run -k "search"
 
 # Verbose output with full tracebacks
-agentunit run -v
+agentassert run -v
 
 # Minimal output (dots only)
-agentunit run -q
+agentassert run -q
 
 # Set random seed for reproducibility
-agentunit run --seed 12345
+agentassert run --seed 12345
 
 # Stop on first failure
-agentunit run -x
+agentassert run -x
 ```
 
 ---
 
 ## Framework Integration
 
-AgentUnit is designed to work with any agent framework:
+AgentAssert is designed to work with any agent framework:
 
 <table>
 <tr>
@@ -291,7 +291,7 @@ jobs:
           pip install -r requirements.txt
       
       - name: Run agent tests
-        run: agentunit run tests/ -v
+        run: agentassert run tests/ -v
 ```
 
 ### GitLab CI
@@ -301,14 +301,14 @@ agent-tests:
   image: python:3.11
   script:
     - pip install agentassert
-    - agentunit run tests/
+    - agentassert run tests/
 ```
 
 ---
 
 ## Comparison with Alternatives
 
-| Feature | AgentUnit | LangSmith | Langfuse | DeepEval |
+| Feature | AgentAssert | LangSmith | Langfuse | DeepEval |
 |---------|-----------|-----------|----------|----------|
 | Local execution | Yes | No | Partial | Yes |
 | No account required | Yes | No | No | Yes |
@@ -335,7 +335,7 @@ We welcome contributions from the community. Please read our [Contributing Guide
 
 ## License
 
-AgentUnit is released under the **MIT License**. See [LICENSE](LICENSE) for details.
+AgentAssert is released under the **MIT License**. See [LICENSE](LICENSE) for details.
 
 ---
 
